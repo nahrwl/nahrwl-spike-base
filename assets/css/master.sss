@@ -1,0 +1,31 @@
+@import '_global.sss'
+@import 'normalize.sss'
+
+/* general */
+
+*,
+*::after,
+*::before,
+  box-sizing: border-box
+
+html
+  font-size: var(--font-size)
+
+body
+  color: var(--text-color)
+  font-family: var(--font-stack)
+  font-size: 1rem
+  line-height: 1.5rem
+  min-height: var(--desktop-min-height)
+
+  &::selection
+    background: var(--highlight-color)
+
+/* screen readers */
+
+.sr-only
+  clip: rect(1px, 1px, 1px, 1px)
+  height: 1px
+  width: 1px
+  overflow: hidden
+  position: absolute !important

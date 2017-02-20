@@ -1,0 +1,69 @@
+{
+  "name": "spark-sc-site",
+  "description": "The homepage for Spark SC, refreshed using Spike.",
+  "version": "0.0.1",
+  "author": "nahrwl",
+  "ava": {
+    "verbose": "true"
+  },
+  "bugs": "https://github.com/nahrwl/spark-sc-site/issues",
+  "dependencies": {
+    "babel-preset-latest": "^6.16.0",
+    "hard-source-webpack-plugin": "0.2.2",
+    "image-webpack-loader": "^3.0.0",
+    "postcss-easy-import": "^1.0.1",
+    "reshape-standard": "^0.4.2",
+    "spike-css-standards": "^0.1.3",
+    "spike-page-id": "^0.1.0",
+    "spike-records": "^0.4.0",
+    "webpack": "^1.13.3"
+  },
+  "devDependencies": {
+    "ava": "^0.17.0",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^2.5.4",
+    "snazzy": "^5.0.0",
+    "spike-core": "^0.12.3",
+    "standard": "^8.6.0",
+    "stylelint": "^7.6.0",
+    "stylelint-config-standard": "^15.0.0"
+  },
+  "homepage": "https://github.com/nahrwl/spark-sc-site",
+  "main": "app.js",
+  "private": true,
+  "repository": "https://github.com/nahrwl/spark-sc-site",
+  "scripts": {
+    "lint": "standard | snazzy ; stylelint '**/*.sss'",
+    "precommit": "echo 'Running pre-commit checks...' && npm run lint -s",
+    "pretest": "npm run lint -s",
+    "test": "NODE_ENV=test ava"
+  },
+  "pre-commit": [
+    "precommit"
+  ],
+  "stylelint": {
+    "extends": "stylelint-config-standard",
+    "rules": {
+      "block-closing-brace-empty-line-before": null,
+      "block-closing-brace-newline-after": null,
+      "block-closing-brace-newline-before": null,
+      "block-closing-brace-space-before": null,
+      "block-opening-brace-newline-after": null,
+      "block-opening-brace-space-after": null,
+      "block-opening-brace-space-before": null,
+      "declaration-block-semicolon-newline-after": null,
+      "declaration-block-semicolon-space-after": null,
+      "declaration-block-semicolon-space-before": null,
+      "declaration-block-trailing-semicolon": null,
+      "max-empty-lines": 2,
+      "property-no-unknown": [ true, {
+        "ignoreProperties": ["font-range", "font-path"]
+        }]
+    },
+    "ignoreFiles": [
+      "node_modules",
+      "public",
+      "_cache"
+    ]
+  }
+}

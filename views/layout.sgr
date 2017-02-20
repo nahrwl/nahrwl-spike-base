@@ -1,0 +1,38 @@
+doctype html
+html(id='{{ pageId }}')
+  head
+    block(name='meta')
+      meta(charset='utf-8')
+      meta(http-equiv='X-UA-Compatible' content='IE=edge, chrome=1')
+      meta(name='description' content='This site was built with Spike by @nahrwl. Insert a better description later.')
+      link(href="https://fonts.googleapis.com/css?family=Merriweather:700" rel="stylesheet")
+      link(href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet")
+
+    block(name='meta-viewport')
+      meta(name="viewport" content="width=device-width, initial-scale=1")
+
+    block(name='opengraph')
+      meta(property="og:title" content="Apply to Spark SC")
+      meta(property="og:image" content="")
+      meta(property="og:url" content="")
+      meta(property="og:image:type" content="image/png")
+      meta(property="og:image:width" content="1200")
+      meta(property="og:image:height" content="630")
+      meta(property="og:description" content="")
+      meta(property="og:type" content="website")
+
+    block(name='title')
+      title My New Webpage
+
+    block(name='stylesheets')
+      link(rel='stylesheet' href='css/index.css')
+
+    script(src='vendor/analytics.js')
+
+  body(role='document')
+
+    div(class="wrapper")
+      block(name='content')
+
+    block(name='javascript')
+      script(src='js/main.js' defer)

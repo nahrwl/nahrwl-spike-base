@@ -1,0 +1,129 @@
+@import 'master.sss'
+
+:root
+  --banner-overlap: 80px
+  --mobile-bp: 700px // Also change this value for @custom-media --mobile
+
+  --one-col:
+    margin: 0 auto
+    max-width: 700px
+
+@custom-media --mobile (max-width: 700px) // Also change this value for --mobile-bp
+
+body
+  background-color: white
+
+.wrapper
+  background-color: white
+
+h2
+  font-size: 1.5rem
+  margin-bottom: -10px
+
+h3
+  font-size: 1.2rem
+  margin-bottom: -10px
+  margin-top: 0
+
+a
+  text-decoration: none
+
+p a,
+li a
+  color: var(--highlight-color)
+  font-weight: bold
+
+  &:hover
+    color: lightblue
+
+.underline
+  text-decoration: underline
+
+.section
+  position: relative
+
+.section-content
+  margin: 0 auto
+  max-width: 1000px
+  padding: 2.5% 5%
+
+  &.jumbotron
+    padding-top: 70px
+    padding-bottom: calc(20px + var(--banner-overlap))
+    text-align: center
+
+.callout
+  font-range: var(--mobile-bp) calc(var(--mobile-bp) + 200px)
+  font-size: responsive 1.4rem 1.6rem
+  font-style: regular
+  font-weight: 900
+  line-height: 2.4rem
+  margin: 0 0 30px
+
+/* Button */
+
+button
+  border: 0
+  display: block
+  margin: 0
+  padding: 0
+
+  &.fancy
+    background-color: var(--highlight-color)
+    border-radius: 4px
+    color: white
+    font-size: 1.2rem
+    font-weight: 600
+    margin: 0 auto
+    padding: 16px 16px 15px
+    text-align: center
+    text-shadow: rgba(0, 0, 0, 0.1) 0 1px 1px
+    transition: all 250ms ease-out-back
+    max-width: 300px
+    width: 100%
+
+    & i
+      margin-right: 0.5rem
+
+    &:hover
+      box-shadow: 0 8px 20px -2px rgba(0, 0, 0, 0.2)
+      transform: scale(1.05)
+
+    &:active
+      box-shadow: 0 8px 20px -2px rgba(0, 0, 0, 0.2)
+      transform: scale(0.98)
+
+/* Flex Grid */
+
+.row
+  @apply --one-col
+
+  padding: 2.5% 0
+  position: relative
+
+  &.bottom
+    padding: 25px 5%
+
+  & > p
+    font-range: 320px 350px
+    font-size: responsive 1rem 1.2rem
+    line-height: 1.6
+
+.grid-row
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  justify-content: space-between
+  padding: 2.5% 0
+
+  &.halves > div
+    width: 48.75%
+
+    @media (--mobile)
+      width: 100%
+
+  &.thirds > div
+    width: 30%
+
+    @media (--mobile)
+      width: 100%
